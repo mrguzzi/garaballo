@@ -10,39 +10,39 @@ import java.util.List;
 @RequestMapping("/categorie")
 public class CategoriaController implements com.fincons.garaballo.sviluppoBloccatori.api.CategoriaApi {
 
-    private final ICategoriaService service;
+    private final ICategoriaService categoriaService;
 
     public CategoriaController(ICategoriaService service) {
-        this.service = service;
+        this.categoriaService = service;
     }
 
     @Override
     @GetMapping
-    public List<Categoria> getAll() {
-        return service.findAll();
+    public List<Categoria> getAllCategorie() {
+        return categoriaService.findAll();
     }
 
     @Override
     @GetMapping("/{id}")
     public Categoria getById(@PathVariable Integer id) {
-        return service.findById(id);
+        return categoriaService.findById(id);
     }
 
     @Override
     @PostMapping
     public Categoria create(@RequestBody Categoria categoria) {
-        return service.create(categoria);
+        return categoriaService.create(categoria);
     }
 
     @Override
     @PutMapping("/{id}")
     public Categoria update(@PathVariable Integer id, @RequestBody Categoria categoria) {
-        return service.update(id, categoria);
+        return categoriaService.update(id, categoria);
     }
 
     @Override
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-        service.delete(id);
+        categoriaService.delete(id);
     }
 }

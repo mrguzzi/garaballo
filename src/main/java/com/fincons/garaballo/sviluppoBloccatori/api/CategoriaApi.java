@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CategoriaApi {
     @GetMapping
-    List<Categoria> getAll();
+    List<Categoria> getAllCategorie();
 
     @GetMapping("/{id}")
     Categoria getById(@PathVariable Integer id);
