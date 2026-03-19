@@ -4,6 +4,7 @@ import com.fincons.garaballo.piste.api.PisteApi;
 import com.fincons.garaballo.piste.dto.PistaDto;
 import com.fincons.garaballo.piste.service.PisteService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,21 +25,25 @@ public class PisteController implements PisteApi {
 
     @Override
     public ResponseEntity<PistaDto> getPistaById(Integer pistaId) {
-        return null;
+        PistaDto pistaDto=pisteService.getPistaById(pistaId);
+        return new ResponseEntity<>(pistaDto, HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<String> deletePista(Integer pistaId) {
-        return null;
+        pisteService.deletePistaById(pistaId);
+        return new ResponseEntity<>("Pista with id "+ pistaId+ "deleted", HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<PistaDto> createPista(PistaDto pista) {
-        return null;
+        PistaDto pistaDto=pisteService.saveNewPista(pista);
+        return new ResponseEntity<>(pista, HttpStatus.OK);
     }
 
     @Override
-    public ResponseEntity<PistaDto> updatePista(PistaDto pista) {
+    public ResponseEntity<PistaDto> updatePista(Integer pistaId, String name) {
+        PistaDto pistaDto=pisteService.updatePista(pistaId,name);
         return null;
     }
 }

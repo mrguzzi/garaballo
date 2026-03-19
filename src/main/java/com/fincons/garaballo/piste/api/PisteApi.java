@@ -7,6 +7,8 @@ import jakarta.validation.constraints.Min;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+
 @RequestMapping("/default")
 public interface PisteApi {
 
@@ -19,7 +21,7 @@ public interface PisteApi {
     @PostMapping
     ResponseEntity<PistaDto> createPista(@Valid @RequestBody PistaDto pista);
 
-    @PutMapping
-    ResponseEntity<PistaDto> updatePista(@Valid @RequestBody PistaDto pista);
+    @PatchMapping
+    ResponseEntity<PistaDto> updatePista(@RequestParam @Max(1000) @Min(0) Integer pistaId, @RequestParam String name);
 
 }

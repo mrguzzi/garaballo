@@ -1,9 +1,7 @@
 package com.fincons.garaballo.piste.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,12 +19,15 @@ public class PistaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(name = "nome")
     private String nome;
-
+    @Column(name = "luogo")
     private String luogo;
-
+    @Column(name = "capienza")
     private Integer capienza;
 
+    @Version
+    @Column(name = "version")
+    private Integer version;
 
 }
