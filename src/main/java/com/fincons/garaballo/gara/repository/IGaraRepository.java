@@ -8,9 +8,4 @@ import java.util.List;
 
 @Repository
 public interface IGaraRepository extends JpaRepository<GaraEntity, Integer> {
-    GaraEntity save(GaraEntity garaEntity);
-
-    List<GaraEntity> findAll();
-
-    void deleteById(Integer integer);
 }

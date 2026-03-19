@@ -5,7 +5,7 @@ import jakarta.transaction.Transactional;
 
 import java.util.List;
 
-public class GaraRepository implements IGaraRepository {
+public class GaraRepository implements GaraDbRepository {
 
     private final IGaraRepository garaRepository;
 
