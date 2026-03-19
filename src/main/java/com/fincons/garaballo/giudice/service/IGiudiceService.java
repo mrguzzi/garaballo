@@ -1,17 +1,18 @@
 package com.fincons.garaballo.giudice.service;
 
-import com.fincons.garaballo.giudice.dto.GiudiceDto;
+import com.fincons.garaballo.giudice.entity.Giudice;
+
 import java.util.List;
 
 public interface IGiudiceService {
 
-    GiudiceDto create(GiudiceDto dto);
+    Giudice create(Giudice entity);
 
-    GiudiceDto getById(Integer id);
+    Giudice getById(Integer id);
 
-    List<GiudiceDto> getAll();
+    List<Giudice> getAll();
 
-    GiudiceDto update(Integer id, GiudiceDto dto);
+    Giudice update(Integer id, Giudice entity);
 
     void delete(Integer id);
 }
