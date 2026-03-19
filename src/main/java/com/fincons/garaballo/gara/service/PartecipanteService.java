@@ -1,4 +1,4 @@
 package com.fincons.garaballo.gara.service;
 
-public class PartecipanteService {
+public class PartecipanteService implements IPartecipanteService{
 }
