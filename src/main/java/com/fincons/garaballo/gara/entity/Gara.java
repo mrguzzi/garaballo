@@ -6,37 +6,34 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Getter
 @Setter
-@Table(name="GARA")
+@Table(name = "GARA")
 @Entity
 public class Gara {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name="data")
+    @Column(name = "data")
     private Timestamp data;
-    @Column(name="pistaId")
+    @Column(name = "pistaId")
     private Integer pistaId;
-    @Column(name="categoriaId")
+    @Column(name = "categoriaId")
     private Integer categoriaId;
-    @Column(name="idPartecipanteUno")
-    private Integer idPartecipanteUno;
-    @Column(name="idPartecipanteDue")
-    private Integer idPartecipanteDue;
-    @Column(name="giudice_id")
+    @ElementCollection
+    private List<Coppia> coppie;
+    @Column(name = "giudice_id")
     private Integer giudiceId;
 
-    public Gara(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, Integer idPartecipanteUno, Integer idPartecipanteDue, Integer giudiceId) {
+    public Gara(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, List<Coppia> coppie, Integer giudiceId) {
         this.id = id;
         this.data = data;
         this.pistaId = pistaId;
         this.categoriaId = categoriaId;
-        this.idPartecipanteUno = idPartecipanteUno;
-        this.idPartecipanteDue = idPartecipanteDue;
+        this.coppie = coppie;
         this.giudiceId = giudiceId;
     }
 }

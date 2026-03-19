@@ -5,6 +5,8 @@ import com.fincons.garaballo.gara.entity.Gara;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface GaraMapper {
 
@@ -13,5 +15,9 @@ public interface GaraMapper {
     Gara toGara(GaraDto garaDto);
 
     GaraDto toGaraDto(Gara gara);
+
+    List<Gara> toGaraList(List<GaraDto> garaDtoList);
+
+    List<GaraDto> toGaraDtoList(List<Gara> garaList);
 }
 
