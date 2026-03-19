@@ -1,44 +1,39 @@
 package com.fincons.garaballo.gara.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Getter
 @Setter
+@Table(name = "GARA")
 @Entity
 public class GaraEntity {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(name = "data")
     private Timestamp data;
-
+    @Column(name = "pistaId")
     private Integer pistaId;
-
+    @Column(name = "categoriaId")
     private Integer categoriaId;
-
-    private Integer idPartecipanteUno;
-
-    private Integer idPartecipanteDue;
-
+    @ElementCollection
+    private List<Coppia> coppie;
+    @Column(name = "giudice_id")
     private Integer giudiceId;
 
-    public GaraEntity(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, Integer idPartecipanteUno, Integer idPartecipanteDue, Integer giudiceId) {
+    public GaraEntity(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, List<Coppia> coppie, Integer giudiceId) {
         this.id = id;
         this.data = data;
         this.pistaId = pistaId;
         this.categoriaId = categoriaId;
-        this.idPartecipanteUno = idPartecipanteUno;
-        this.idPartecipanteDue = idPartecipanteDue;
+        this.coppie = coppie;
         this.giudiceId = giudiceId;
     }
 }
