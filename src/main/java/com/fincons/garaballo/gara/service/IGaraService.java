@@ -1,19 +1,19 @@
 package com.fincons.garaballo.gara.service;
 
 import com.fincons.garaballo.gara.dto.GaraDto;
-import com.fincons.garaballo.gara.entity.Gara;
+import com.fincons.garaballo.gara.entity.GaraEntity;
 
 import java.util.List;
 
 public interface IGaraService {
 
-    Gara creaGara(GaraDto garaDto);
+    GaraEntity creaGara(GaraDto garaDto);
 
-    Gara aggiornaGara(Integer id, GaraDto garaDto);
+    GaraEntity aggiornaGara(Integer id, GaraDto garaDto);
 
-    Gara getGara(Integer id);
+    GaraEntity getGara(Integer id);
 
-    List<Gara> findAll();
+    List<GaraEntity> findAll();
 
     void eliminaGara(Integer id);
 }
