@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @Entity
-public class Gara {
+public class GaraEntity {
 
 
     @Id
@@ -32,7 +32,7 @@ public class Gara {
 
     private Integer giudiceId;
 
-    public Gara(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, Integer idPartecipanteUno, Integer idPartecipanteDue, Integer giudiceId) {
+    public GaraEntity(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, Integer idPartecipanteUno, Integer idPartecipanteDue, Integer giudiceId) {
         this.id = id;
         this.data = data;
         this.pistaId = pistaId;
