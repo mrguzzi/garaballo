@@ -1,7 +1,7 @@
 package com.fincons.garaballo.gara.service;
 
 import com.fincons.garaballo.gara.dto.GaraDto;
-import com.fincons.garaballo.gara.entity.Gara;
+import com.fincons.garaballo.gara.entity.GaraEntity;
 import com.fincons.garaballo.gara.repository.IGaraRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,22 +18,22 @@ public class GaraService implements IGaraService {
     }
 
     @Override
-    public Gara creaGara(GaraDto garaDto) {
+    public GaraEntity creaGara(GaraDto garaDto) {
         return null;
     }
 
     @Override
-    public Gara aggiornaGara(Integer id, GaraDto garaDto) {
+    public GaraEntity aggiornaGara(Integer id, GaraDto garaDto) {
         return null;
     }
 
     @Override
-    public Gara getGara(Integer id) {
+    public GaraEntity getGara(Integer id) {
         return null;
     }
 
     @Override
-    public List<Gara> findAll() {
+    public List<GaraEntity> findAll() {
         return List.of();
     }
 

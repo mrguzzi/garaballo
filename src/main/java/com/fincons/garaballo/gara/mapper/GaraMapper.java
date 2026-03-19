@@ -1,7 +1,7 @@
 package com.fincons.garaballo.gara.mapper;
 
 import com.fincons.garaballo.gara.dto.GaraDto;
-import com.fincons.garaballo.gara.entity.Gara;
+import com.fincons.garaballo.gara.entity.GaraEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -12,12 +12,12 @@ public interface GaraMapper {
 
     GaraMapper INSTANCE = Mappers.getMapper(GaraMapper.class);
 
-    Gara toGara(GaraDto garaDto);
+    GaraEntity toGara(GaraDto garaDto);
 
-    GaraDto toGaraDto(Gara gara);
+    GaraDto toGaraDto(GaraEntity garaEntity);
 
-    List<Gara> toGaraList(List<GaraDto> garaDtoList);
+    List<GaraEntity> toGaraList(List<GaraDto> garaDtoList);
 
-    List<GaraDto> toGaraDtoList(List<Gara> garaList);
+    List<GaraDto> toGaraDtoList(List<GaraEntity> garaEntityList);
 }
 

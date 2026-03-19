@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @Table(name = "GARA")
 @Entity
-public class Gara {
+public class GaraEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +28,7 @@ public class Gara {
     @Column(name = "giudice_id")
     private Integer giudiceId;
 
-    public Gara(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, List<Coppia> coppie, Integer giudiceId) {
+    public GaraEntity(Integer id, Timestamp data, Integer pistaId, Integer categoriaId, List<Coppia> coppie, Integer giudiceId) {
         this.id = id;
         this.data = data;
         this.pistaId = pistaId;

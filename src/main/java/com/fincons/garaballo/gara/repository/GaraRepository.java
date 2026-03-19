@@ -1,13 +1,10 @@
 package com.fincons.garaballo.gara.repository;
 
-import com.fincons.garaballo.gara.entity.Gara;
-import com.fincons.garaballo.gara.mapper.GaraMapper;
+import com.fincons.garaballo.gara.entity.GaraEntity;
 import jakarta.transaction.Transactional;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 public class GaraRepository implements IGaraRepository {
 
     private final IGaraRepository garaRepository;
@@ -18,12 +15,12 @@ public class GaraRepository implements IGaraRepository {
 
     @Override
     @Transactional(rollbackOn = Exception.class, value = Transactional.TxType.REQUIRED)
-    public Gara save(Gara gara) {
+    public GaraEntity save(GaraEntity garaEntity) {
         return null;
     }
 
     @Override
-    public List<Gara> findAll() {
+    public List<GaraEntity> findAll() {
         return garaRepository.findAll();
     }
 
