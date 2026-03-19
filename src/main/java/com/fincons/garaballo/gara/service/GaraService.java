@@ -2,7 +2,7 @@ package com.fincons.garaballo.gara.service;
 
 import com.fincons.garaballo.gara.dto.GaraDto;
 import com.fincons.garaballo.gara.entity.Gara;
-import com.fincons.garaballo.gara.repository.GaraRepository;
+import com.fincons.garaballo.gara.repository.IGaraRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.List;
 @Service
 public class GaraService implements IGaraService {
 
-    private final GaraRepository repository;
+    private final IGaraRepository repository;
 
-    public GaraService(GaraRepository repository) {
+    public GaraService(IGaraRepository repository) {
         this.repository = repository;
     }
 
