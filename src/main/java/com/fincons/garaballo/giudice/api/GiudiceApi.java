@@ -18,8 +18,6 @@ public interface GiudiceApi {
     @GetMapping()
     ResponseEntity<List<Giudice>> getAllGiudici();
 
-    @PostMapping("/vote")
-    ResponseEntity<Giudice> setVoting(@RequestParam @Min(0) @Max(5) Float voto, String persona);
 
 
 }

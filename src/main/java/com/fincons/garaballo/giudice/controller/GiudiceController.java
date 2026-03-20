@@ -25,9 +25,5 @@ public class GiudiceController implements GiudiceApi {
         return new ResponseEntity<>(judgeService, HttpStatus.OK);
     }
 
-    @Override
-    public ResponseEntity setVoting(Float voto, String persona) {
-        return null;
-    }
 
 }
