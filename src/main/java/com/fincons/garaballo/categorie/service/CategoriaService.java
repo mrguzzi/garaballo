@@ -1,7 +1,7 @@
-package com.fincons.garaballo.sviluppoBloccatori.service;
+package com.fincons.garaballo.categorie.service;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
-import com.fincons.garaballo.sviluppoBloccatori.repository.CategoriaRepository;
+import com.fincons.garaballo.categorie.domain.Categoria;
+import com.fincons.garaballo.categorie.repository.CategoriaRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

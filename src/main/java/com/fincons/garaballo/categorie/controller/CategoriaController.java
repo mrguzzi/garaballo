@@ -1,14 +1,14 @@
-package com.fincons.garaballo.sviluppoBloccatori.controller;
+package com.fincons.garaballo.categorie.controller;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
-import com.fincons.garaballo.sviluppoBloccatori.service.ICategoriaService;
+import com.fincons.garaballo.categorie.domain.Categoria;
+import com.fincons.garaballo.categorie.service.ICategoriaService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/categorie")
-public class CategoriaController implements com.fincons.garaballo.sviluppoBloccatori.api.CategoriaApi {
+public class CategoriaController implements com.fincons.garaballo.categorie.api.CategoriaApi {
 
     private final ICategoriaService categoriaService;
 

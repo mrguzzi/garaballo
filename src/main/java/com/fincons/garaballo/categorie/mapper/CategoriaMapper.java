@@ -1,7 +1,7 @@
-package com.fincons.garaballo.sviluppoBloccatori.mapper;
+package com.fincons.garaballo.categorie.mapper;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
-import com.fincons.garaballo.sviluppoBloccatori.domain.db.CategoriaDto;
+import com.fincons.garaballo.categorie.domain.Categoria;
+import com.fincons.garaballo.categorie.domain.db.CategoriaDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

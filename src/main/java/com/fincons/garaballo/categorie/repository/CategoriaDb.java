@@ -1,8 +1,7 @@
-package com.fincons.garaballo.sviluppoBloccatori.repository;
+package com.fincons.garaballo.categorie.repository;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
-import com.fincons.garaballo.sviluppoBloccatori.domain.db.CategoriaDto;
-import com.fincons.garaballo.sviluppoBloccatori.mapper.CategoriaMapper;
+import com.fincons.garaballo.categorie.domain.Categoria;
+import com.fincons.garaballo.categorie.mapper.CategoriaMapper;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import lombok.extern.slf4j.Slf4j;

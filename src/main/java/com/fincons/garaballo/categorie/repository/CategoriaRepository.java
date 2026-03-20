@@ -1,6 +1,6 @@
-package com.fincons.garaballo.sviluppoBloccatori.repository;
+package com.fincons.garaballo.categorie.repository;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
+import com.fincons.garaballo.categorie.domain.Categoria;
 
 import java.util.List;
 

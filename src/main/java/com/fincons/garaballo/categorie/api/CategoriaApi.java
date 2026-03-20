@@ -1,6 +1,6 @@
-package com.fincons.garaballo.sviluppoBloccatori.api;
+package com.fincons.garaballo.categorie.api;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
+import com.fincons.garaballo.categorie.domain.Categoria;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
