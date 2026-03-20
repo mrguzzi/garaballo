@@ -1,13 +1,13 @@
-package com.fincons.garaballo.sviluppoBloccatori.api;
+package com.fincons.garaballo.categorie.api;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
+import com.fincons.garaballo.categorie.domain.Categoria;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 public interface CategoriaApi {
     @GetMapping
-    List<Categoria> getAll();
+    List<Categoria> getAllCategorie();
 
     @GetMapping("/{id}")
     Categoria getById(@PathVariable Integer id);

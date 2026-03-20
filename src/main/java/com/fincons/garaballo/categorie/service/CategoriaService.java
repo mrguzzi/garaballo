@@ -1,7 +1,7 @@
-package com.fincons.garaballo.sviluppoBloccatori.service;
+package com.fincons.garaballo.categorie.service;
 
-import com.fincons.garaballo.sviluppoBloccatori.domain.Categoria;
-import com.fincons.garaballo.sviluppoBloccatori.repository.CategoriaRepository;
+import com.fincons.garaballo.categorie.domain.Categoria;
+import com.fincons.garaballo.categorie.repository.CategoriaRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -11,26 +11,25 @@ import java.util.List;
 @Service
 public class CategoriaService implements ICategoriaService {
 
-    private final CategoriaRepository repository;
+    private final CategoriaRepository categoriaRepository;
 
-    public CategoriaService(CategoriaRepository repository) {
-        this.repository = repository;
+    public CategoriaService(CategoriaRepository categoriaRepository) {
+        this.categoriaRepository = categoriaRepository;
     }
 
     @Override
     public List<Categoria> findAll() {
-        return repository.findAll();
+        return categoriaRepository.getAllCategorie();
     }
 
     @Override
     public Categoria findById(Integer id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Categoria non trovata"));
+        return categoriaRepository.findCategoriaById(id);
     }
 
     @Override
     public Categoria create(Categoria categoria) {
-        return repository.save(categoria);
+        return categoriaRepository.createCategoria(categoria);
     }
 
     @Override
@@ -38,11 +37,11 @@ public class CategoriaService implements ICategoriaService {
         Categoria categoria = findById(id);
         categoria.setNome(updated.getNome());
         categoria.setDescrizione(updated.getDescrizione());
-        return repository.save(categoria);
+        return categoriaRepository.createCategoria(categoria);
     }
 
     @Override
     public void delete(Integer id) {
-        repository.deleteById(id);
+        categoriaRepository.deleteCategoriaById(id);
     }
 }
