@@ -14,13 +14,9 @@ import java.text.DateFormat;
 @AllArgsConstructor
 @Builder
 public class PartecipanteDto {
-
     private final Integer id;
     private final String nome;
     private final String cognome;
     private final DateFormat dataDiNascita;
     private final LivelloEsperienzaEnum expLvl;
-
-
-
 }
